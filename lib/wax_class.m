@@ -112,7 +112,10 @@ static int __call(lua_State *L) {
         // If we the method has already been swizzled (by the class's super, then
         // just leave it up to the super!
         if (method_getImplementation(m) != (IMP)allocWithZone) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-method-access"
             class_addMethod(metaclass, @selector(wax_originalAllocWithZone:), method_getImplementation(m), method_getTypeEncoding(m));
+#pragma clang diagnostic pop
             class_addMethod(metaclass, @selector(allocWithZone:), (IMP)allocWithZone, "@@:^{_NSZone=}");
         }
     }
@@ -150,7 +153,10 @@ static id allocWithZone(id self, SEL _cmd, NSZone *zone) {
     lua_State *L = wax_currentLuaState(); 
     BEGIN_STACK_MODIFY(L);
 
-    id instance = [self wax_originalAllocWithZone:zone];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-method-access"
+  id instance = [self wax_originalAllocWithZone:zone];
+#pragma clang diagnostic pop
     object_setInstanceVariable(instance, WAX_CLASS_INSTANCE_USERDATA_IVAR_NAME, @"YEAP");
     
     END_STACK_MODIFY(L, 0);
