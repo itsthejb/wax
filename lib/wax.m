@@ -6,7 +6,11 @@
 //  Copyright 2009 Probably Interactive. All rights reserved.
 //
 
-#import "ProtocolLoader.h"
+#import <TargetConditionals.h>
+
+#if !TARGET_OS_MAC
+  #import "ProtocolLoader.h"
+#endif
 
 #import "wax.h"
 #import "wax_class.h"
