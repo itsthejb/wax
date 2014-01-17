@@ -188,7 +188,7 @@ static void TCPServerAcceptCallBack(CFSocketRef socket, CFSocketCallBackType typ
 }
 
 - (NSString*)description {
-	return [NSString stringWithFormat:@"<%@ = 0x%08X | port %d | netService = %@>", [self class], (long)self, [_netService port] , _netService];
+	return [NSString stringWithFormat:@"<%@ = 0x%08X | port %d | netService = %@>", [self class], (unsigned int)self, [_netService port] , _netService];
 }
 
 // Stream Delegate
