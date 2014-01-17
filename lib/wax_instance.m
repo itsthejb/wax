@@ -441,10 +441,10 @@ static int methodClosure(lua_State *L) {
         luaL_error(L, "Not Enough arguments given! Method named '%s' requires %d argument(s), you gave %d. (Make sure you used ':' to call the method)", selectorName, objcArgumentCount + 1, lua_gettop(L));
     }
     
-    void **arguements = calloc(sizeof(void*), objcArgumentCount);
+    void **arguments = calloc(sizeof(void*), objcArgumentCount);
     for (int i = 0; i < objcArgumentCount; i++) {
-        arguements[i] = wax_copyToObjc(L, [signature getArgumentTypeAtIndex:i + 2], i + 2, nil);
-        [invocation setArgument:arguements[i] atIndex:i + 2];
+        arguments[i] = wax_copyToObjc(L, [signature getArgumentTypeAtIndex:i + 2], i + 2, nil);
+        [invocation setArgument:arguments[i] atIndex:i + 2];
     }
 
     @try {
@@ -455,9 +455,9 @@ static int methodClosure(lua_State *L) {
     }
     
     for (int i = 0; i < objcArgumentCount; i++) {
-        free(arguements[i]);
+        free(arguments[i]);
     }
-    free(arguements);
+    free(arguments);
     
     int methodReturnLength = [signature methodReturnLength];
     if (methodReturnLength > 0) {
