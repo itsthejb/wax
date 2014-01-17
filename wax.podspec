@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/itsthejb/wax.git", :tag => "v" + s.version.to_s }
   s.ios.deployment_target = '4.0'
   s.osx.deployment_target = '10.4'
-  s.source_files  = 'lib/*.{h,m}'
+  s.source_files  = [ 'lib/*.{h,m}', 'lib/lua/*.{h,c}' ]
   s.frameworks    = 'Foundation'
   s.requires_arc  = false
 end
