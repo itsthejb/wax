@@ -212,6 +212,7 @@ static void TCPServerAcceptCallBack(CFSocketRef socket, CFSocketCallBackType typ
 		}
 			
 		case NSStreamEventErrorOccurred:
+    default:
 			NSLog(@"Error: Stream error encountered!");
 			break;
 	}	
