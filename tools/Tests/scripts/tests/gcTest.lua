@@ -14,13 +14,14 @@ describe["Auto Retain"] = function()
 
   it["correctly retains an alloc'd copy"] = function()
     local obj = NSObject:alloc():init()
-    expect( obj:retainCount() ).should_be(1)
+    expect( obj:retainCount() ).should_be(2)
   end
   
   it["correctly retains an object copy"] = function()
     local obj = NSDate:init()
     local objCopy = obj:copy()
-    expect( objCopy:retainCount() ).should_be(1)
+    local objCopy2 = objCopy:copy()
+    expect( objCopy2:retainCount() ).should_be(3)
   end
   
 end
