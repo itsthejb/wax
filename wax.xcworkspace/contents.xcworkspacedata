@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:wax.podspec">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:tools/Tests/Tests.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:tools/Framework/Framework.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:examples/IBExample/IBExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:examples/MapKitExample/MapKitExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:examples/States/States.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:examples/States (without wax.framework)/States.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:examples/TwitterApp/TwitterApp.xcodeproj">
+   </FileRef>
+</Workspace>
