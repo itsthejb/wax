@@ -1,16 +1,15 @@
 waxClass{"ExtendedSimpleObject", SimpleObject}
 
 function init(self)
-  self.super:init()
+  return self.super:init()
 end
 
 function initWithAnimal(self, animal)
-  self.super:initWithValue(animal)
+  return self.super:initWithValue(animal)
 end
 
 function initWithValue(self, value)
-  self.super:initWithValue(value)
-  return self
+  return self.super:initWithValue(value)
 end
 
 function valueOverride(self)
