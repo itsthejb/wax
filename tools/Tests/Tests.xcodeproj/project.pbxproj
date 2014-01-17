@@ -197,6 +197,21 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Tests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests_Prefix.pch; sourceTree = "<group>"; };
+		49D845A518894F7600ABC799 /* AppDelegate.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppDelegate.lua; sourceTree = "<group>"; };
+		49D845A718894F7600ABC799 /* base64Test.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = base64Test.lua; sourceTree = "<group>"; };
+		49D845A818894F7600ABC799 /* classTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = classTest.lua; sourceTree = "<group>"; };
+		49D845AA18894F7600ABC799 /* Bambi.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bambi.lua; sourceTree = "<group>"; };
+		49D845AB18894F7600ABC799 /* Deer.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = Deer.lua; sourceTree = "<group>"; };
+		49D845AC18894F7600ABC799 /* ExtendedSimpleObject.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExtendedSimpleObject.lua; sourceTree = "<group>"; };
+		49D845AD18894F7600ABC799 /* ProtocolSimpleObject.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProtocolSimpleObject.lua; sourceTree = "<group>"; };
+		49D845AE18894F7600ABC799 /* gcTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = gcTest.lua; sourceTree = "<group>"; };
+		49D845AF18894F7600ABC799 /* init.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		49D845B018894F7600ABC799 /* instanceTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = instanceTest.lua; sourceTree = "<group>"; };
+		49D845B118894F7600ABC799 /* jsonTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = jsonTest.lua; sourceTree = "<group>"; };
+		49D845B218894F7600ABC799 /* objcToLuaTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = objcToLuaTest.lua; sourceTree = "<group>"; };
+		49D845B318894F7600ABC799 /* protocolTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = protocolTest.lua; sourceTree = "<group>"; };
+		49D845B418894F7600ABC799 /* structTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = structTest.lua; sourceTree = "<group>"; };
+		49D845B518894F7600ABC799 /* xmlTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = xmlTest.lua; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		91373B231066B2B30089FEE3 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		91373BEF1066C8930089FEE3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -417,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				49D845A418894F7600ABC799 /* scripts */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				043E60C6113C3DA5007A6104 /* wax */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -456,6 +472,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		49D845A418894F7600ABC799 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				49D845A518894F7600ABC799 /* AppDelegate.lua */,
+				49D845A618894F7600ABC799 /* tests */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		49D845A618894F7600ABC799 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				49D845A718894F7600ABC799 /* base64Test.lua */,
+				49D845A818894F7600ABC799 /* classTest.lua */,
+				49D845A918894F7600ABC799 /* fixtures */,
+				49D845AE18894F7600ABC799 /* gcTest.lua */,
+				49D845AF18894F7600ABC799 /* init.lua */,
+				49D845B018894F7600ABC799 /* instanceTest.lua */,
+				49D845B118894F7600ABC799 /* jsonTest.lua */,
+				49D845B218894F7600ABC799 /* objcToLuaTest.lua */,
+				49D845B318894F7600ABC799 /* protocolTest.lua */,
+				49D845B418894F7600ABC799 /* structTest.lua */,
+				49D845B518894F7600ABC799 /* xmlTest.lua */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		49D845A918894F7600ABC799 /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				49D845AA18894F7600ABC799 /* Bambi.lua */,
+				49D845AB18894F7600ABC799 /* Deer.lua */,
+				49D845AC18894F7600ABC799 /* ExtendedSimpleObject.lua */,
+				49D845AD18894F7600ABC799 /* ProtocolSimpleObject.lua */,
+			);
+			path = fixtures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,6 +537,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tests" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
