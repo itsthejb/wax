@@ -4,7 +4,7 @@
 #import <Foundation/Foundation.h>
 #import "lua.h"
 
-#define WAX_VERSION 0.93
+#define WAX_VERSION 0.94
 
 void wax_setup();
 void wax_start(char *initScript, lua_CFunction extensionFunctions, ...);
